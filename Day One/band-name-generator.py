@@ -2,11 +2,11 @@
 
 def one():
 
-    a = input("What is the name of the city you grew up in : ")
-    b = input("What is the name of your pet : ")
-    c = a+" "+b
+    city = input("What is the name of the city you grew up in : ")
+    pet = input("What is the name of your pet : ")
+    band = city+" "+pet
 
-    print("Your band name can be : ", c)
+    print("Your band name can be : ", band)
 
 
 one()
