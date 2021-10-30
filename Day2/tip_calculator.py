@@ -15,7 +15,7 @@ def two():
     # the round function operates as follows - round(number, decimal_places)
     print("Each person should pay: $", each_person)
     # can also use python 3.6+ f-strings to print the above line
-    # print(f"Each person should pay: ${each_person:0.2f}") where f indicates f-string formatting, and 0.2f indicates 2 decimal places. 0 indicates sign-aware zero padding for numeric types, and the : indicates the start of a format specifier.
+    # print(f"Each person should pay: ${:0.2f}.format(each_person)") where f indicates f-string formatting, and 0.2f indicates 2 decimal places. 0 indicates sign-aware zero padding for numeric types, and the : indicates the start of a format specifier.
     # .2 sets the precision to 2 decimal places.
 
 
