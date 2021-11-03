@@ -1,6 +1,64 @@
 # create a hangman game
 from random_words import RandomWords
+import os
 # a python module that generates random words
+
+emoji = ['''
+    +---+
+    |   |
+    O   |
+    /|\  |
+    / \  |
+        |
+    =========
+    ''', '''
+    +---+
+    |   |
+    O   |
+    /|\  |
+    /    |
+        |
+    =========
+    ''', '''
+    +---+
+    |   |
+    O   |
+    /|\  |
+        |
+        |
+    =========
+    ''', '''
+    +---+
+    |   |
+    O   |
+    /|   |
+        |
+        |
+    =========''', '''
+    +---+
+    |   |
+    O   |
+    |   |
+        |
+        |
+    =========
+    ''', '''
+    +---+
+    |   |
+    O   |
+        |
+        |
+        |
+    =========
+    ''', '''
+    +---+
+    |   |
+        |
+        |
+        |
+        |
+    =========
+    ''']
 
 
 def hangman(word, word_l):
@@ -44,67 +102,28 @@ def hangman(word, word_l):
         print("You lose!")
         print("The word was {}".format(word_l))
 
+    print("Play Again?")
+    play_again = input("Y/N: ").lower()
+    try:
+        if play_again == "y":
+            main()
+        else:
+            os.system('clear')
+            print("Goodbye!")
+    except:
+        print("Incorrect Input")
+        print("Goodbye!")
 
-emoji = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
 
-rw = RandomWords()
-word_l = rw.random_word().lower()
-word = []
-for i in word_l:
-    word.append(i)
-hangman(word, word_l)
+def main():
+    os.system('clear')
+
+    rw = RandomWords()
+    word_l = rw.random_word().lower()
+    word = []
+    for i in word_l:
+        word.append(i)
+    hangman(word, word_l)
+
+
+main()
