@@ -16,7 +16,7 @@ symbols = [".", "$", "/", "|", "?", "!", "@", "#", "%", "^", "&", "*",
 
 def password_gen():
 
-    a = int(input("How many letters? "))
+    a = int(input("How many characters? "))
     b = int(input("How many symbols? "))
     c = int(input("How many numbers? "))
 
