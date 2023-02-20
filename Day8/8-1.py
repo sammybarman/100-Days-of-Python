@@ -1,5 +1,5 @@
 '''
-write a program to alculate the amount of paint cans needed to paint a wall of length*width
+write a program to calculate the amount of paint cans needed to paint a wall of length*width
 1 can of paint can cover 5sq meters of the wall
 round up cans to the nearest integer
 '''
